@@ -114,13 +114,12 @@ fb_ads <- fb_ads |>
 
 plot_q3 <- fb_ads |>
   filter(office == "US House") |>
-  ggplot(mapping = aes(x = impressions_millions, 
-                                       y = fct_reorder(cand_name_last, impressions_millions))) +
-  geom_histogram(stat = "identity", na.rm = TRUE)
+  ggplot(mapping = aes(x = impressions_millions)) +
+  geom_histogram()
 
 plot_q3
 ```
-The plot makes an upside-down pyramid shape (a sort of log graph shape), with most candidates receiving less than 10 million impressions on Facebook.
+The plot makes an sloped shape (a sort of exponential decay), with most candidates receiving less than 10 million impressions on Facebook.
 
 \newpage
 
