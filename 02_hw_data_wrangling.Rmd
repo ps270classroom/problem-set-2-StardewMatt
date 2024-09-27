@@ -116,7 +116,7 @@ plot_q3 <- fb_ads |>
   filter(office == "US House") |>
   ggplot(mapping = aes(x = impressions_millions, 
                                        y = fct_reorder(cand_name_last, impressions_millions))) +
-  geom_bar(stat = "identity", na.rm = TRUE)
+  geom_histogram(stat = "identity", na.rm = TRUE)
 
 plot_q3
 ```
